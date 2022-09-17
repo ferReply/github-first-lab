@@ -15,7 +15,7 @@ jobs:
           CIAO_MONDO: ciao
         shell: bash
         run: > 
-          echo "::set-output name=TAG_NAME::$($CIAO_MONDO)"
+          echo "::set-output name=TAG_NAME::$CIAO_MONDO"
           echo "$TAG_NAME"
       - name: prova
         shell: bash
