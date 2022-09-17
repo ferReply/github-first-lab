@@ -9,7 +9,7 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: control numero
-        run: sh ./executeUrl.sh
+        run: sh ./workflows/executeUrl.sh
      #   shell: bash
      #   if: ${{ env.NUMERO_N == 1 }}
      #   run: |
