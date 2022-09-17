@@ -13,9 +13,9 @@ jobs:
         id: STEP1
         env: 
           CIAO_MONDO: ciao
-        run: echo "$CIAO_MONDO"
+        run: echo "::set-output name=TAG_NAME::$(${{ env.CIAO_MONDO }})"
       - name: prova
-        run: echo "${{ steps.STEP1.env.CIAO_MONDO }}"
+        run: echo "steps.STEP1.outputs.TAG_NAME"
      #   if: ${{ env.NUMERO_N == 1 }}
      #   run: |
      #     echo "ok SOCIO"
