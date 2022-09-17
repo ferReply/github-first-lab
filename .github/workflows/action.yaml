@@ -13,8 +13,10 @@ jobs:
         id: STEP1
         env: 
           CIAO_MONDO: ciao
+        shell: bash
         run: echo "::set-output name=TAG_NAME::$($CIAO_MONDO)"
       - name: prova
+        shell: bash
         run: echo "${{ steps.STEP1.outputs.TAG_NAME }}"
      #   if: ${{ env.NUMERO_N == 1 }}
      #   run: |
