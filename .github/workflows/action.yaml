@@ -9,7 +9,7 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: control numero
-        run: ./.github/workflows/executeUrl.sh
+        run: ./.github/sript/prova.sh
      #   shell: bash
      #   if: ${{ env.NUMERO_N == 1 }}
      #   run: |
