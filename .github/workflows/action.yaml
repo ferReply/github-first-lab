@@ -1,10 +1,10 @@
 name: Must run on customer runner
 
-on: push
+on: [push]
 
 jobs:
   init:
-    runs-on: ubuntu-latest
+    runs-on: [ubuntu-latest]
     env:
       NUMERO_N: 1
     steps:
