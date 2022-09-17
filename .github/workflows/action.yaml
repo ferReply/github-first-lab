@@ -9,8 +9,8 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: control numero
-        run: sh ./.github/sript/prova.sh
-     #   shell: bash
+        run: ./.github/sript/prova.sh
+        shell: bash
      #   if: ${{ env.NUMERO_N == 1 }}
      #   run: |
      #     echo "ok SOCIO"
