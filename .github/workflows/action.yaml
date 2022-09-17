@@ -15,7 +15,7 @@ jobs:
           CIAO_MONDO: ciao
         run: echo "$CIAO_MONDO"
       - name: prova
-        run: echo "${{ steps.STEP1.CIAO_MONDO }}"
+        run: echo "${{ steps.STEP1.env.CIAO_MONDO }}"
      #   if: ${{ env.NUMERO_N == 1 }}
      #   run: |
      #     echo "ok SOCIO"
