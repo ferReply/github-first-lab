@@ -2,11 +2,11 @@ name: Must run on customer runner
 
 on: [push]
 
+env:
+  NUMERO_N: 1
 jobs:
   init:
     runs-on: [ubuntu-latest]
-    env:
-      NUMERO_N: 1
     steps:
       - name: control numero
         if: ${{ evn.NUMERO_N == 1 }}
