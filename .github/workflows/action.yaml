@@ -19,7 +19,7 @@ jobs:
         shell: bash
         run: |  
           echo "${{ steps.STEP_PROVA.outputs.TAG_NAME }}"
-          echo "${{ steps.STEP_PROVA.CIAO_MONDO }}"
+          echo " porva 2 : ${{ steps.STEP_PROVA.env.CIAO_MONDO }}"
      #   if: ${{ env.NUMERO_N == 1 }}
      #   run: |
      #     echo "ok SOCIO"
