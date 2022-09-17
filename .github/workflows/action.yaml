@@ -4,7 +4,16 @@ on: push
 
 jobs:
   init:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
+    env:
+      NUMERO_N: 1
     steps:
-      - run: echo 'hello cloud gurus'
-      - run: echo $HOSTNAME
+      - name: control numero
+        if: ${{ evn.NUMERO_N == 1 }}
+          - run:|
+            echo "ok SOCIO"
+      - name: control
+        if: ${{ evn.NUMERO_N == 1 }}
+          exit 1
+      - name: finish
+        run: echo "Bella socio"
