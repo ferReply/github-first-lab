@@ -11,11 +11,12 @@ jobs:
       - name: control numero
      #   shell: bash
         if: ${{ evn.NUMERO_N == 1 }}
-          run:|
-            echo "ok SOCIO"
+        run: |
+          echo "ok SOCIO"
       - name: control
    #     shell: bash
         if: ${{ evn.NUMERO_N == 1 }}
+        run: echo "uscire!!"
           exit 1
       - name: finish
         run: echo "Bella socio"
