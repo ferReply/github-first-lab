@@ -16,7 +16,8 @@ jobs:
       - name: control
    #     shell: bash
         if: ${{ env.NUMERO_N == 1 }}
-        run: echo "uscire!!"
+        run: | 
+          echo "uscire!!"
           exit 1
       - name: finish
         run: echo "Bella socio"
