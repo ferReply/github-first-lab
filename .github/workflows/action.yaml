@@ -9,12 +9,12 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: control numero
-        shell: bash
+     #   shell: bash
         if: ${{ evn.NUMERO_N == 1 }}
-          - run:|
+          run:|
             echo "ok SOCIO"
       - name: control
-        shell: bash
+   #     shell: bash
         if: ${{ evn.NUMERO_N == 1 }}
           exit 1
       - name: finish
