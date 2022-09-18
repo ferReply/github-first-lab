@@ -14,6 +14,7 @@ jobs:
         id: STEP_PROVA
         run: |
           chmod +x ./.github/sript/prova.sh
+          echo "::set-output name=URL_REQ::$(https://iap.bmwgroup.net/nexus/repository/IAP_Docker_Snapshot/v2/dsa-iam/jwks-auth-service/manifests/1.4.2-SNAPSHOT.eedfbbe)"
           ./.github/sript/prova.sh
 #         env: 
 #           CIAO_MONDO: ciao
