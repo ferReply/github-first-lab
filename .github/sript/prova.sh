@@ -12,7 +12,7 @@ case $RESPONSE_GET in
     echo "404"
     ;;
    *)
-    curl http.net/nexus/repository/IAP_Docker_Snapshot/v2/dsa-iam/jwks-auth-service/manifests/1.4.2-SNAPSHOT.eedfbbe 
+#    curl http.net/nexus/repository/IAP_Docker_Snapshot/v2/dsa-iam/jwks-auth-service/manifests/1.4.2-SNAPSHOT.eedfbbe 
     echo "ERRORE"
     exit 1
     ;;
