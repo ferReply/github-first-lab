@@ -2,7 +2,7 @@
 
 case $1 in
   200)
-    echo "description: The image exist"
+    echo "description: The image $3 exist"
     ;;
   404)
     echo "404"
