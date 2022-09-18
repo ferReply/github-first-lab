@@ -1,5 +1,10 @@
 #! /bin/bash
 
+if [ $1 == 200 ]
+then 
+  echo "ok"
+if
+
 case $1 in
   200)
     echo "description: The image $3 exist"
