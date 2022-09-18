@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: control numero
         env:
-          URL: http://sdjnsdngjsdfgsdf.df
+          URL: https://iap.bmwgroup.net/nexus/repository/IAP_Docker_Snapshot/v2/dsa-iam/jwks-auth-service/manifests/1.4.2-SNAPSHOT.eedfbbe
         id: STEP_PROVA
         run: |
           echo "::set-output name=RESPONSE_GET_NEXUS::$(curl -s -o /dev/null -w %{http_code} $URL)"
