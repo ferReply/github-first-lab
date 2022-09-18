@@ -18,6 +18,8 @@ jobs:
           echo "::set-output name=RESPONSE_GET_NEXUS::$(curl -s -o /dev/null -w %{http_code} $URL)"
           chmod +x ./.github/sript/prova.sh
           RESPONSE=$RESPONSE_GET_NEXUS
+          echo "$RESPONSE"
+          echo $RESPONSE
           ./.github/sript/prova.sh $RESPONSE $URL CIAo_SOCIO
         shell: bash
       - name: prova continuo
