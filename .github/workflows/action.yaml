@@ -18,7 +18,6 @@ jobs:
           echo "::set-output name=RESPONSE_GET_NEXUS::$(curl -s -o /dev/null -w %{http_code} $URL)"
           echo"stampa"
           echo ${{ steps.STEP_PROVA.outputs.RESPONSE_GET_NEXUS }}
-          echo ${{ outputs.RESPONSE_GET_NEXUS }}
           RESPONSE=$RESPONSE_GET_NEXUS
           echo "$RESPONSE"
           echo $RESPONSE
