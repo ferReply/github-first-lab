@@ -3,7 +3,7 @@
 if [ $1 == 200 ]
 then 
   echo "ok"
-if
+fi
 
 case $1 in
   200)
