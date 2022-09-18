@@ -14,8 +14,7 @@ jobs:
         id: STEP_PROVA
         run: |
           chmod +x ./.github/sript/prova.sh
-          ./.github/sript/prova.sh
-          echo $RESULT
+          ./.github/sript/prova.sh 200
         shell: bash
       - name: prova continuo
         run: echo "CIAO MONDO"
