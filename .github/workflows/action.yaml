@@ -15,6 +15,7 @@ jobs:
         run: |
           chmod +x ./.github/sript/prova.sh
           ./.github/sript/prova.sh
+          echo $RESULT
         shell: bash
       - name: prova continuo
         run: echo "CIAO MONDO"
