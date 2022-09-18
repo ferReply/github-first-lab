@@ -16,6 +16,8 @@ jobs:
           chmod +x ./.github/sript/prova.sh
           ./.github/sript/prova.sh
         shell: bash
+      - name: prova continuo
+        run: echo "CIAO MONDO"
 #         env: 
 #           CIAO_MONDO: ciao
 #         run: |
