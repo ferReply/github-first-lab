@@ -1,5 +1,10 @@
 #! /bin/bash
 
+for i in "$@"
+do
+  echo "Arg...: $i"
+done
+
 if [ $1 == 200 ]
 then 
   echo "ok"
