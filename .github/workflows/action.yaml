@@ -15,8 +15,8 @@ jobs:
           URL: https://iap.bmwgroup.net/nexus/repository/IAP_Docker_Snapshot/v2/dsa-iam/jwks-auth-service/manifests/1.4.2-SNAPSHOT.eedfbbe
         id: STEP_PROVA
         run: |
-          echo "::set-output name=RESPONSE_GET_NEXUS::$(curl -s -o /dev/null -w %{http_code} $URL)"
           chmod +x ./.github/sript/prova.sh
+          RESPONSE_GET_NEXUS=$(curl -s -o /dev/null -w %{http_code} $URL)
           echo"stampa"
           echo $RESPONSE_GET_NEXUS
           RESPONSE=$RESPONSE_GET_NEXUS
