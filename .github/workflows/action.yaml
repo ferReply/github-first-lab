@@ -9,6 +9,7 @@ jobs:
     runs-on: [ubuntu-latest]
     
     steps:
+      - uses: actions/checkout@v2
       - name: control numero
         id: STEP_PROVA
         run: |
