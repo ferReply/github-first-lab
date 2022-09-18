@@ -17,6 +17,8 @@ jobs:
         run: |
           echo "::set-output name=RESPONSE_GET_NEXUS::$(curl -s -o /dev/null -w %{http_code} $URL)"
           chmod +x ./.github/sript/prova.sh
+          echo"stampa"
+          echo $RESPONSE_GET_NEXUS
           RESPONSE=$RESPONSE_GET_NEXUS
           echo "$RESPONSE"
           echo $RESPONSE
