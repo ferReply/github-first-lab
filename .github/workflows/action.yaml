@@ -16,6 +16,8 @@ jobs:
         id: STEP_PROVA
         run: |
           echo "::set-output name=RESPONSE_GET_NEXUS::$(curl -s -o /dev/null -w %{http_code} $URL)"
+          echo "risposta"
+          echo $RESPONSE_GET_NEXUS
         shell: bash
       - name: prova continuo
         env:
