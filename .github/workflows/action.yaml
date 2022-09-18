@@ -16,7 +16,7 @@ jobs:
         id: STEP_PROVA
         run: |
           chmod +x ./.github/sript/prova.sh
-          ./.github/sript/prova.sh 350 $URL CIAo_SOCIO
+          ./.github/sript/prova.sh 200 $URL CIAo_SOCIO
         shell: bash
       - name: prova continuo
         run: echo "CIAO MONDO"
