@@ -8,7 +8,7 @@ case $1 in
     echo "404"
     ;;
    *)
-    echo "ERRORE_SOCIO"
+    echo "ERRORE_SOCIO - $1"
     echo "fai cagare"
     curl $2
     ;;
