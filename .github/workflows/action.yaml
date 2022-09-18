@@ -11,15 +11,18 @@ jobs:
     steps:
       - name: control numero
         id: STEP_PROVA
-        env: 
-          CIAO_MONDO: ciao
         run: |
-          echo "::set-output name=TAG_NAME::$CIAO_MONDO"
-      - name: prova
-        shell: bash
-        run: |  
-          echo "${{ steps.STEP_PROVA.outputs.TAG_NAME }}"
-          echo " porva 2 : ${{ steps.STEP_PROVA.env.CIAO_MONDO }}"
+          chmod +x ./.github/sript/prova.sh
+          ./.github/sript/prova.sh
+#         env: 
+#           CIAO_MONDO: ciao
+#         run: |
+#           echo "::set-output name=TAG_NAME::$CIAO_MONDO"
+#       - name: prova
+#         shell: bash
+#         run: |  
+#           echo "${{ steps.STEP_PROVA.outputs.TAG_NAME }}"
+#           echo " porva 2 : ${{ steps.STEP_PROVA.env.CIAO_MONDO }}"
      #   if: ${{ env.NUMERO_N == 1 }}
      #   run: |
      #     echo "ok SOCIO"
