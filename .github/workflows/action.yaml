@@ -11,10 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: control numero
+        env:
+          URL: http://sdjnsdngjsdfgsdf.df
         id: STEP_PROVA
         run: |
           chmod +x ./.github/sript/prova.sh
-          ./.github/sript/prova.sh 200
+          ./.github/sript/prova.sh 350 $URL
         shell: bash
       - name: prova continuo
         run: echo "CIAO MONDO"
