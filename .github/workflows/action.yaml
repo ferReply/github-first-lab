@@ -34,8 +34,10 @@ jobs:
             }
       - name: step1
         run: |
-          echo $ {{ github.event.inputs.name }}
+          echo ${{ github.event.inputs.name }}
+          echo "-- VALORE SOCIO --"
           echo ${{ env.env1 }}
+          echo "--------"
 #         run: |
 #           echo "::set-output name=RESPONSE_GET_NEXUS::$(curl -s -o /dev/null -w %{http_code} $URL)"
 #           echo "risposta"
