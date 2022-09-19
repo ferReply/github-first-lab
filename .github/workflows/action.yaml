@@ -1,6 +1,15 @@
 name: Must run on customer runner
 
-on: [push]
+on: 
+  workflow_dispatch:
+    inputs:
+      name:
+        type: choice
+        description: 'Numero'
+        required: true
+        options:
+          - primo-numero
+          - secondo-numero
 
 env:
   NUMERO_N: 1
@@ -15,17 +24,20 @@ jobs:
           URL: https://www.google.com/
         id: STEP_PROVA
         run: |
-          echo "::set-output name=RESPONSE_GET_NEXUS::$(curl -s -o /dev/null -w %{http_code} $URL)"
-          echo "risposta"
-          echo $RESPONSE_GET_NEXUS
-        shell: bash
-      - name: prova continuo
-        env:
-          URL: https://iap.bmwgroup.net/nexus/repository/IAP_Docker_Snapshot/v2/dsa-iam/jwks-auth-service/manifests/1.4.2-SNAPSHOT.eedfbbe
-        run: |
-          echo ${{ steps.STEP_PROVA.outputs.RESPONSE_GET_NEXUS }}
-          chmod +x ./.github/sript/prova.sh
-          ./.github/sript/prova.sh ${{ steps.STEP_PROVA.outputs.RESPONSE_GET_NEXUS }} $URL CIAo_SOCIO
+          ${{ env.NUMERO_N }} =  {{ github.event.inputs.name }}
+          echo ${{ env.NUMERO_N }}
+#         run: |
+#           echo "::set-output name=RESPONSE_GET_NEXUS::$(curl -s -o /dev/null -w %{http_code} $URL)"
+#           echo "risposta"
+#           echo $RESPONSE_GET_NEXUS
+#         shell: bash
+#       - name: prova continuo
+#         env:
+#           URL: https://iap.bmwgroup.net/nexus/repository/IAP_Docker_Snapshot/v2/dsa-iam/jwks-auth-service/manifests/1.4.2-SNAPSHOT.eedfbbe
+#         run: |
+#           echo ${{ steps.STEP_PROVA.outputs.RESPONSE_GET_NEXUS }}
+#           chmod +x ./.github/sript/prova.sh
+#           ./.github/sript/prova.sh ${{ steps.STEP_PROVA.outputs.RESPONSE_GET_NEXUS }} $URL CIAo_SOCIO
 #         env: 
 #           CIAO_MONDO: ciao
 #         run: |
