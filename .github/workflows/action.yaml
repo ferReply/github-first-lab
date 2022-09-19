@@ -12,7 +12,7 @@ on:
           - secondo-numero
 
 env:
-  NUMERO_N: ${{ github.even.inputs.name }}
+  NUMERO_N: ${{ github.event.inputs.name }}
 jobs:
   init:
     runs-on: [ubuntu-latest]
