@@ -61,7 +61,7 @@ jobs:
           echo ${{ env.env1 }}
           echo "--------"
           echo "-- VALORE SECONDO --"
-          echo ${{ env.decs }}
+          echo ${{ env.desc }}
           echo "--------"
 #         run: |
 #           echo "::set-output name=RESPONSE_GET_NEXUS::$(curl -s -o /dev/null -w %{http_code} $URL)"
