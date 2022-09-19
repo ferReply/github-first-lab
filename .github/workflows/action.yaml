@@ -33,12 +33,12 @@ jobs:
           map: |
             {
               "primo-numero": {
-              "env1": "value1",
-              "env2": "value2"
+                "env1": "value1",
+                "env2": "value2"
               },
-            "secondo-numero": {
-              "env1": "value1_overwrite",
-              "env3": "value3"
+              "secondo-numero": {
+                "env1": "value1_overwrite",
+                "env3": "value3"
               }
             }
       - name: CONFIG_2
@@ -48,10 +48,10 @@ jobs:
           map: |
             {
               "numero-uno": {
-              "desc": "UNO"
+                "desc": "UNO"
               },
-              "2": {
-              "desc": "DUE"
+              "numero-due": {
+                "desc": "DUE"
               }
             }
       - name: step1
