@@ -12,20 +12,29 @@ on:
           - secondo-numero
 
 env:
-  NUMERO_N: 1
+  NUMERO_N: ${{ github.even.inputs.name }}
 jobs:
   init:
     runs-on: [ubuntu-latest]
     
     steps:
-      - uses: actions/checkout@v2
-      - name: control numero
-        env:
-          URL: https://www.google.com/
-        id: STEP_PROVA
+      - uses: kanga333/variable-mapper@master
+        with:
+          key: ${{ env.NUMERO_N }}
+          map: |
+            {
+              "primo-numero": {
+              "env1": "value1",
+              "env2": "value2"
+              },
+            "secondo-numero": {
+              "env1": "value1_overwrite",
+              "env3": "value3"
+              }
+            }
+      - name: step1
         run: |
-          ${{ env.NUMERO_N }} =  {{ github.event.inputs.name }}
-          echo ${{ env.NUMERO_N }}
+          echo ${{ env.env1 }}
 #         run: |
 #           echo "::set-output name=RESPONSE_GET_NEXUS::$(curl -s -o /dev/null -w %{http_code} $URL)"
 #           echo "risposta"
